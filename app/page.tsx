@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { useRef, useState, useEffect, useCallback } from "react";
 import {
   ArrowRight, MapPin, Mail, Phone, Droplet, Zap, TreePine, Shield,
-  ShieldCheck, Route, MessageCircle, ChevronDown, Landmark,
+  ShieldCheck, Route, ChevronDown, Landmark,
   Star, Award, Building2, Users, Menu, X, CheckCircle2, TrendingUp,
   Home as HomeIcon, AlarmCheck
 } from "lucide-react";
@@ -31,7 +31,7 @@ const heroSlides = [
     accent: "Through Land & Legacy",
     sub: "18 years of delivering premium plotted townships with clear legal titles and superior infrastructure.",
     cta1: { label: "View Townships", href: "#projects" },
-    cta2: { label: "WhatsApp Enquiry", href: "https://wa.me/917791086060" },
+    cta2: { label: "WhatsApp Enquiry", href: "https://wa.me/919599872124?text=Hello%20Dhan%20Dhara%20Developers!%20I%20am%20interested%20in%20knowing%20more%20about%20your%20projects." },
   },
   {
     id: 2,
@@ -160,6 +160,31 @@ function AnimatedCounter({ to, suffix = "" }: { to: number; suffix?: string }) {
 
   return <span ref={ref}>{count}{suffix}</span>;
 }
+
+/* ─────────────────────────────────────────────
+   WHATSAPP ICON
+───────────────────────────────────────────── */
+const WhatsAppIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+  </svg>
+);
+
+const FacebookIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+);
+
+const InstagramIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+);
+
+const TwitterIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+);
+
+const LinkedinIcon = ({ className }: { className?: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+);
 
 /* ─────────────────────────────────────────────
    PRELOADER COMPONENT
@@ -303,10 +328,10 @@ export default function Home() {
 
             {/* Right actions */}
             <div className="flex items-center gap-3">
-              <a href="tel:+917791086060"
+              <a href="tel:+919599872124"
                 className={`hidden md:flex items-center gap-2 text-[11px] font-medium transition-colors ${navScrolled ? "text-charcoal hover:text-[#C5A059]" : "text-white/85 hover:text-white"}`}>
                 <Phone className="w-3.5 h-3.5" />
-                +91 77910 86060
+                +91 95998 72124
               </a>
               <a href="#contact"
                 className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 text-[10px] font-bold tracking-[0.2em] uppercase transition-all duration-300"
@@ -348,8 +373,8 @@ export default function Home() {
                     </motion.a>
                   ))}
                   <div className="pt-5 flex flex-col gap-3">
-                    <a href="tel:+917791086060" className="flex items-center gap-3 text-sm text-charcoal">
-                      <Phone className="w-4 h-4 text-[#C5A059]" /> +91 77910 86060
+                    <a href="tel:+919599872124" className="flex items-center gap-3 text-sm text-charcoal">
+                      <Phone className="w-4 h-4 text-[#C5A059]" /> +91 95998 72124
                     </a>
                     <a href="#contact"
                       className="mt-1 py-3.5 text-center text-[11px] font-bold tracking-[0.2em] uppercase btn-gold">
@@ -1016,9 +1041,9 @@ export default function Home() {
                 className="btn-gold inline-flex items-center gap-2.5 px-9 py-4 text-[11px] w-full sm:w-auto justify-center">
                 Book Free Site Visit <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="https://wa.me/917791086060" target="_blank" rel="noopener noreferrer"
+              <a href="https://wa.me/919599872124?text=Hello%20Dhan%20Dhara%20Developers!%20I%20am%20interested%20in%20knowing%20more%20about%20your%20projects." target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-9 py-4 text-[11px] font-bold tracking-[0.2em] uppercase border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/10 hover:border-[#25D366] transition-all w-full sm:w-auto justify-center rounded-md">
-                <MessageCircle className="w-4 h-4" /> WhatsApp Us Now
+                <WhatsAppIcon className="w-4 h-4" /> WhatsApp Us Now
               </a>
             </div>
           </motion.div>
@@ -1058,8 +1083,8 @@ export default function Home() {
 
                   <div className="flex flex-col gap-6">
                     {[
-                      { icon: Phone,          val: "+91 77910 86060",    label: "Call Us",          href: "tel:+917791086060" },
-                      { icon: MessageCircle,  val: "+91 77910 86060",    label: "WhatsApp",         href: "https://wa.me/917791086060" },
+                      { icon: Phone,          val: "+91 95998 72124",    label: "Call Us",          href: "tel:+919599872124" },
+                      { icon: WhatsAppIcon,   val: "+91 95998 72124",    label: "WhatsApp",         href: "https://wa.me/919599872124?text=Hello%20Dhan%20Dhara%20Developers!%20I%20am%20interested%20in%20knowing%20more%20about%20your%20projects." },
                       { icon: Mail,           val: "invest@dhandhara.com", label: "Email",          href: "mailto:invest@dhandhara.com" },
                       { icon: MapPin,         val: "Ajmer Road, Jaipur",  label: "Office",          href: "#" },
                     ].map((c, i) => (
@@ -1206,11 +1231,25 @@ export default function Home() {
                   </li>
                   <li className="flex items-center gap-3">
                     <Phone className="w-4 h-4 text-[#C5A059]/60 shrink-0" />
-                    <a href="tel:+917791086060" className="text-sm text-white/40 hover:text-[#C5A059] transition-colors">+91 77910 86060</a>
+                    <a href="tel:+919599872124" className="text-sm text-white/40 hover:text-[#C5A059] transition-colors">+91 95998 72124</a>
                   </li>
                   <li className="flex items-center gap-3">
                     <Mail className="w-4 h-4 text-[#C5A059]/60 shrink-0" />
                     <a href="mailto:info@dhandhara.com" className="text-sm text-white/40 hover:text-[#C5A059] transition-colors">info@dhandhara.com</a>
+                  </li>
+                  <li className="flex items-center gap-4 pt-4 mt-2 border-t border-white/10">
+                    <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#C5A059] hover:text-white text-white/40 transition-colors">
+                      <FacebookIcon className="w-4 h-4" />
+                    </a>
+                    <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#C5A059] hover:text-white text-white/40 transition-colors">
+                      <InstagramIcon className="w-4 h-4" />
+                    </a>
+                    <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#C5A059] hover:text-white text-white/40 transition-colors">
+                      <TwitterIcon className="w-4 h-4" />
+                    </a>
+                    <a href="#" className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#C5A059] hover:text-white text-white/40 transition-colors">
+                      <LinkedinIcon className="w-4 h-4" />
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -1231,7 +1270,7 @@ export default function Home() {
             FLOATING ACTIONS — WhatsApp + Call
         ═══════════════════════════════════════════════════════ */}
         <div className="fixed bottom-6 right-4 md:right-6 z-[200] flex flex-col gap-2.5">
-          <a href="https://wa.me/917791086060" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/919599872124?text=Hello%20Dhan%20Dhara%20Developers!%20I%20am%20interested%20in%20knowing%20more%20about%20your%20projects." target="_blank" rel="noopener noreferrer"
             id="wa-float"
             className="group flex items-center overflow-hidden rounded-full transition-all duration-400"
             style={{
@@ -1240,19 +1279,19 @@ export default function Home() {
               boxShadow: "0 6px 28px rgba(37,211,102,0.35)",
             }}>
             <div className="p-3.5 shrink-0">
-              <MessageCircle className="w-5 h-5" />
+              <WhatsAppIcon className="w-5 h-5" />
             </div>
-            <span className="pr-4 text-[10px] font-bold tracking-widest uppercase max-w-0 group-hover:max-w-[120px] whitespace-nowrap overflow-hidden transition-all duration-400">
+            <span className="text-[10px] font-bold tracking-widest uppercase whitespace-nowrap overflow-hidden transition-all duration-400 max-w-0 opacity-0 pr-0 group-hover:max-w-[120px] group-hover:opacity-100 group-hover:pr-4">
               WhatsApp
             </span>
           </a>
 
-          <a href="tel:+917791086060" id="call-float"
+          <a href="tel:+919599872124" id="call-float"
             className="group flex items-center overflow-hidden rounded-full transition-all duration-400 btn-gold">
             <div className="p-3.5 shrink-0">
               <Phone className="w-5 h-5" />
             </div>
-            <span className="pr-4 text-[10px] font-bold tracking-widest uppercase max-w-0 group-hover:max-w-[80px] whitespace-nowrap overflow-hidden transition-all duration-400">
+            <span className="text-[10px] font-bold tracking-widest uppercase whitespace-nowrap overflow-hidden transition-all duration-400 max-w-0 opacity-0 pr-0 group-hover:max-w-[80px] group-hover:opacity-100 group-hover:pr-4">
               Call Now
             </span>
           </a>
